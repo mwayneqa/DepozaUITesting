@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='DepozaUITests.xctest' tests='8' failures='4'>
+  <testsuite name='DepozaUITests.AddExpenseTest' tests='1' failures='0'>
+    <testcase classname='DepozaUITests.AddExpenseTest' name='testAddExpense' time='12.944'/>
+  </testsuite>
+  <testsuite name='DepozaUITests.DeleteExpenseTest' tests='3' failures='3'>
+    <testcase classname='DepozaUITests.DeleteExpenseTest' name='testDeleteExpense'>
+      <failure message='Multiple matches found for &quot;Stereo&quot; StaticText.'>BaseScreen.swift:16</failure>
+    </testcase>
+    <testcase classname='DepozaUITests.DeleteExpenseTest' name='testDeleteExpense'>
+      <failure message='failed: caught &quot;NSInternalInconsistencyException&quot;, &quot;Activity cannot be used after its scope has completed.&quot;'>BaseScreen.swift:16</failure>
+    </testcase>
+    <testcase classname='DepozaUITests.DeleteExpenseTest' name='testDeleteExpenseButton'>
+      <failure message='Multiple matches found for &quot;Stereo&quot; StaticText.'>BaseScreen.swift:16</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name='DepozaUITests.HomeTest' tests='4' failures='1'>
+    <testcase classname='DepozaUITests.HomeTest' name='testAddExpenseButton' time='5.864'/>
+    <testcase classname='DepozaUITests.HomeTest' name='testInitialAmount'>
+      <failure message='XCTAssertTrue failed - Total amount is 495'>HomeScreen.swift:19</failure>
+    </testcase>
+    <testcase classname='DepozaUITests.HomeTest' name='testInitialDate' time='5.884'/>
+    <testcase classname='DepozaUITests.HomeTest' name='testSearchButton' time='5.915'/>
+  </testsuite>
+</testsuites>

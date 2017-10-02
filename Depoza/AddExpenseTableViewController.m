@@ -82,11 +82,13 @@ typedef NS_ENUM(NSUInteger, SectionType) {
     _delegateNotified = NO;
     _datePickerVisible = NO;
     _date = [NSDate date];
+    self.expenseTextField.accessibilityIdentifier = @"enter_amount";
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [_expenseTextField becomeFirstResponder];
+    self.expenseTextField.accessibilityIdentifier = @"enter_amount";
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -340,6 +342,7 @@ typedef NS_ENUM(NSUInteger, SectionType) {
         UITableViewCell *descriptionCell = [tableView dequeueReusableCellWithIdentifier:kDescriptionTextFieldCellIdentifier];
         
         self.descriptionTextField = (UITextField *)[descriptionCell viewWithTag:kDescriptionTextFieldTag];
+        self.descriptionTextField.accessibilityIdentifier = @"enter_description";
         
         [descriptionCell.contentView addSubview:separatorLineView];
         

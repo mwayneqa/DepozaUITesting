@@ -109,7 +109,11 @@ NSString * const ContinuingActivityRepresentsSearchableExpenseNotification = @"C
     [MotionEffectWithTiltAlongVerticalAndHorizontalAxis addMotionEffectToView:_addTransactionRoundedButton magnitude:kMotionEffectMagnitudeValue];
     [self addNotificationSubscribes];
     
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@""
+        style:UIBarButtonItemStylePlain target:nil action:nil];
+                                             
+    self.addTransactionRoundedButton.accessibilityIdentifier = @"add_button";
+    self.totalExpensesLabel.accessibilityIdentifier = @"total-Expenses_amount";
 }
 
 - (void)viewWillAppear:(BOOL)animated {
